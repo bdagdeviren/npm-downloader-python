@@ -1,0 +1,45 @@
+{% load crispy_forms_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Npm Package Downloader</title>
+    <link rel="shortcut icon" type="image/png" href="{% static "image/npm-ico.png" %}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        #div1{
+            width: 100%
+        }
+        #div2{
+            width: 50%;
+            margin: 0 auto;
+            border: 1px solid;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #img{
+            width: 35%;
+        }
+        #input1{
+            font-size: 43px;
+            margin-left: 15px;
+            vertical-align: middle;
+            text-align: left;
+        }
+    </style>
+</head>
+<body style="padding: 10px;">
+    <div id="div1">
+        <div id="div2">
+            <img src="{% static "image/npm.png" %}" id="img">
+            <label id="input1">Package <br> Downloader</label>
+        </div>
+    </div>
+    {% crispy form form.helper %}
+    <div>
+
+    </div>
+</body>
+</html>

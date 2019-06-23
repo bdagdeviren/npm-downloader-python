@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  web:
+    image: npmdownloader:v1
+    ports:
+      - "80:80"
+    volumes:
+      - ./download:/npmdownloader/download
+    command: python ./manage.py runserver 0.0.0.0:80
